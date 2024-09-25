@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -11,4 +11,30 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.maxwebsite-photo-of-me {
+  clip-path: circle();
+}
+
+.maxwebsite-font-title {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.maxwebsite-inline-icon {
+  bottom: 0.1rem;
+  position: relative;
+}
+
+.maxwebsite-demo-infinite-maze {
+  height: 250px;
+  background: transparent url('./assets/demo-infinite-maze.gif') center center no-repeat;
+}
+
+.link {
+  @apply text-blue-400 underline hover:text-blue-500;
+}
+
+.link-white {
+  @apply text-gray-200 underline hover:text-white;
 }
