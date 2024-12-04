@@ -321,7 +321,7 @@ function App() {
               <li>😵‍💫 Unique maze solving experience</li>
               <li>
                 📱 Playable in browser and on mobile:{' '}
-                <a className="link-white" href="https://maksimoreo.github.io/InfiniteMaze/">
+                <a className="link-white" href="https://maksimoreo.github.io/InfiniteMaze/" target="_blank">
                   PLAY
                 </a>
               </li>
