@@ -35,7 +35,9 @@ function App() {
             <h1 className="mt-8 text-4xl font-bold text-center text-gray-900 maxwebsite-font-title md:text-5xl sm:text-left sm:mt-0">
               Maksim Kulagin
             </h1>
-            <h2 className="text-2xl font-light text-center text-gray-800 md:text-3xl sm:text-left">Backend Engineer</h2>
+            <h2 className="text-2xl font-light text-center text-gray-800 md:text-3xl sm:text-left">
+              Backend Engineer | <span className="text-xl md:text-2xl">Vilnius, Lithuania</span>
+            </h2>
 
             <div className="flex justify-center mt-8 sm:justify-start">
               <Socials />
