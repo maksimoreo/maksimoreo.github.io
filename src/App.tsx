@@ -21,6 +21,7 @@ import ProjectSection from './components/ProjectSection'
 import Socials from './components/Socials'
 import Discord from './components/pins/Discord'
 import ExternalSite from './components/ExternalSite'
+import TypeScript from './components/pins/TypeScript'
 
 function App() {
   return (
@@ -45,18 +46,60 @@ function App() {
           </div>
         </div>
 
-        <div className="mx-3 xl:w-1/3">
-          <h3 className="mt-16 text-3xl font-semibold text-gray-700 maxwebsite-font-title md:mt-24">About me</h3>
-          <p className="mt-4 text-justify">
-            I'm a backend engineer, currently studying Masters degree in Software Engineering. I work professionally
-            with Ruby on Rails, but feel myself confident with React and .NET too. I enjoy movies, video games and
-            working on personal projects 🧑‍💻
-          </p>
+        <div className="flex flex-col mx-3 mt-16 xl:w-1/3 lg:gap-10 xl:gap-0 xl:flex-col lg:flex-row md:mt-24">
+          <div>
+            <h3 className="text-3xl font-semibold text-gray-700 maxwebsite-font-title ">About me</h3>
+            <p className="mt-4 text-justify">
+              I'm a backend engineer, currently studying Masters degree in Software Engineering. I work professionally
+              with Ruby on Rails, but feel myself confident with React and .NET too. I enjoy movies, video games and
+              working on personal projects 🧑‍💻
+            </p>
+          </div>
+
+          <div>
+            <h3 className="mt-4 text-3xl font-semibold text-gray-700 maxwebsite-font-title lg:mt-0 xl:mt-8">Skills</h3>
+            <ul className="flex items-center justify-between gap-8 mt-4">
+              <li>
+                <div className="flex items-center justify-center h-16">
+                  <Rails size="size-16" />
+                </div>
+                <p className="text-xs font-bold text-center">Rails</p>
+              </li>
+
+              <li>
+                <div className="flex items-center justify-center h-16">
+                  <DotNet size="size-20" />
+                </div>
+                <p className="text-xs font-bold text-center">.Net</p>
+              </li>
+
+              <li>
+                <div className="flex items-center justify-center h-16">
+                  <React size="size-12" />
+                </div>
+                <p className="text-xs font-bold text-center">React</p>
+              </li>
+
+              <li>
+                <div className="flex items-center justify-center h-16">
+                  <TypeScript size="size-12" />
+                </div>
+                <p className="text-xs font-bold text-center">TypeScript</p>
+              </li>
+
+              <li>
+                <div className="flex items-center justify-center h-16">
+                  <Docker size="size-12" color="originalBlue" />
+                </div>
+                <p className="text-xs font-bold text-center">Docker</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
       <div className="container mx-auto">
-        <h3 className="mx-3 mt-12 mb-8 text-3xl font-semibold text-gray-700 maxwebsite-font-title md:mt-24 xl:mt-32">
+        <h3 className="mx-3 mt-12 mb-8 text-3xl font-semibold text-gray-700 maxwebsite-font-title md:mt-24 xl:mt-24">
           Projects
         </h3>
       </div>
@@ -75,9 +118,9 @@ function App() {
         descriptionClasses={'text-gray-300'}
         pins={
           <>
-            <Rails />
+            <Rails size="size-4" withLabel={true} />
             <Mui />
-            <React textColor="light" />
+            <React size="size-4" withLabel={true} />
             <Playwright />
           </>
         }
@@ -137,7 +180,7 @@ function App() {
         descriptionClasses={'text-gray-300'}
         pins={
           <>
-            <React textColor="light" />
+            <React size="size-4" withLabel={true} />
             <Nodejs />
             <Socketio />
             <Tailwindcss />
@@ -184,7 +227,7 @@ function App() {
           <>
             <Unity variant="white" />
             <Csharp />
-            <Docker />
+            <Docker size="size-4" withLabel={true} />
           </>
         }
         descriptionText={
@@ -192,7 +235,13 @@ function App() {
             <p>Features:</p>
             <ul>
               <li>🐋 Synchronisation with Docker engine</li>
-              <li>🖥️ Terminal implementation in Unity</li>
+              <li>
+                🖥️{' '}
+                <a className="link-white" href="https://en.wikipedia.org/wiki/Pseudoterminal">
+                  PTY
+                </a>
+                -based terminal implementation in Unity
+              </li>
             </ul>
 
             <p className="mt-6 text-justify">
@@ -320,7 +369,7 @@ function App() {
         pins={
           <>
             <Csharp />
-            <DotNet />
+            <DotNet size="size-5" />
             <span className="font-bold">WPF</span>
           </>
         }
@@ -384,7 +433,7 @@ function App() {
         descriptionClasses={'text-gray-300'}
         pins={
           <>
-            <Ruby />
+            <Ruby size="size-4" withLabel={true} />
             <span className="font-bold">ImageMagick</span>
             <Discord />
           </>
