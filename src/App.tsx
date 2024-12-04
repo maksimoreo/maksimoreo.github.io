@@ -55,11 +55,12 @@ function App() {
         </div>
       </div>
 
-      <div className="container mx-auto max-w-7xl">
-        <h3 className="mx-3 mt-12 mb-8 text-3xl font-semibold text-gray-700 maxwebsite-font-title md:mt-24">
+      <div className="container mx-auto">
+        <h3 className="mx-3 mt-12 mb-8 text-3xl font-semibold text-gray-700 maxwebsite-font-title md:mt-24 xl:mt-32">
           Projects
         </h3>
       </div>
+
       <ProjectSection
         backgroundColor="#034ECC"
         demoElements={
