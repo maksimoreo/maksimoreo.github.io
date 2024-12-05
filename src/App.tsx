@@ -289,8 +289,8 @@ function App() {
           <path
             d="M0 52L64 60L129 46L193 43L257 58L321 74L386 62L450 48L514 74L579 64L643 52L707 72L771 74L836 62L900 67L900 0L836 0L771 0L707 0L643 0L579 0L514 0L450 0L386 0L321 0L257 0L193 0L129 0L64 0L0 0Z"
             fill="#2496ED"
-            stroke-linecap="square"
-            stroke-linejoin="bevel"
+            strokeLinecap="square"
+            strokeLinejoin="bevel"
           ></path>
         </svg>
       </div>
@@ -346,8 +346,8 @@ function App() {
           <path
             d="M0 31L82 25L164 27L245 24L327 20L409 24L491 30L573 24L655 38L736 30L818 36L900 25L900 0L818 0L736 0L655 0L573 0L491 0L409 0L327 0L245 0L164 0L82 0L0 0Z"
             fill="#000000"
-            stroke-linecap="square"
-            stroke-linejoin="bevel"
+            strokeLinecap="square"
+            strokeLinejoin="bevel"
           ></path>
         </svg>
       </div>
