@@ -46,19 +46,20 @@ function App() {
           </div>
         </div>
 
-        <div className="flex flex-col mx-3 mt-16 xl:w-1/3 lg:gap-10 xl:gap-0 xl:flex-col lg:flex-row md:mt-24">
-          <div>
-            <h3 className="text-3xl font-semibold text-gray-700 maxwebsite-font-title ">About me</h3>
-            <p className="mt-4 text-justify">
+        {/* default: flex-col, md: flex-row, xl: flex-col */}
+        <div className="flex flex-col mx-3 mt-16 xl:w-1/3 md:gap-10 xl:gap-0 xl:flex-col md:flex-row md:mt-24">
+          <div className="md:w-1/2 xl:w-auto">
+            <h3 className="text-3xl font-semibold text-gray-700 maxwebsite-font-title">About me</h3>
+            <p className="mt-3 text-justify">
               I'm a backend engineer, currently studying Masters degree in Software Engineering. I work professionally
               with Ruby on Rails, but feel myself confident with React and .NET too. I enjoy movies, video games and
               working on personal projects 🧑‍💻
             </p>
           </div>
 
-          <div>
-            <h3 className="mt-4 text-3xl font-semibold text-gray-700 maxwebsite-font-title lg:mt-0 xl:mt-8">Skills</h3>
-            <ul className="flex items-center justify-between gap-8 mt-4">
+          <div className="md:w-1/2 xl:w-auto">
+            <h3 className="mt-6 text-3xl font-semibold text-gray-700 maxwebsite-font-title md:mt-0 xl:mt-8">Skills</h3>
+            <ul className="flex flex-wrap items-center justify-between gap-6 mt-3">
               <li>
                 <div className="flex items-center justify-center h-16">
                   <Rails size="size-16" />
@@ -85,13 +86,6 @@ function App() {
                   <TypeScript size="size-12" />
                 </div>
                 <p className="text-xs font-bold text-center">TypeScript</p>
-              </li>
-
-              <li>
-                <div className="flex items-center justify-center h-16">
-                  <Docker size="size-12" color="originalBlue" />
-                </div>
-                <p className="text-xs font-bold text-center">Docker</p>
               </li>
             </ul>
           </div>
@@ -480,14 +474,14 @@ function App() {
 
           <ul className="pl-6 text-justify list-disc">
             <li className="mt-1">
-              <a className="link" href="https://github.com/maksimoreo/maksimoreo.github.io" target="_blank">
+              <a className="break-words link" href="https://github.com/maksimoreo/maksimoreo.github.io" target="_blank">
                 github.com/maksimoreo/maksimoreo.github.io
               </a>{' '}
               - this portfolio webpage
             </li>
 
             <li className="mt-1">
-              <a className="link" href="https://github.com/mkvtech/game2048" target="_blank">
+              <a className="break-words link" href="https://github.com/mkvtech/game2048" target="_blank">
                 github.com/mkvtech/game2048
               </a>{' '}
               - clone of a popular{' '}
@@ -498,7 +492,7 @@ function App() {
             </li>
 
             <li className="mt-1">
-              <a className="link" href="https://github.com/maksimoreo/ruby-mastermind" target="_blank">
+              <a className="break-words link" href="https://github.com/maksimoreo/ruby-mastermind" target="_blank">
                 github.com/maksimoreo/ruby-mastermind
               </a>{' '}
               - Mastermind terminal puzzle game implementation in Ruby. Works in browser:{' '}
@@ -509,11 +503,11 @@ function App() {
 
             <li className="mt-1">
               Please see more projects on my GitHub profiles:{' '}
-              <a className="link" href="https://github.com/maksimoreo" target="_blank">
+              <a className="break-words link" href="https://github.com/maksimoreo" target="_blank">
                 github.com/maksimoreo
               </a>{' '}
               and{' '}
-              <a className="link" href="https://github.com/mkvtech" target="_blank">
+              <a className="break-words link" href="https://github.com/mkvtech" target="_blank">
                 github.com/mkvtech
               </a>
             </li>
