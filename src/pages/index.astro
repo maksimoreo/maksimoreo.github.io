@@ -1,0 +1,303 @@
+---
+import { Image } from 'astro:assets'
+import photoOfMe from '../assets/photo.jpg'
+
+import DotNet from '../components/pins/DotNet.astro'
+import Rails from '../components/pins/Rails.astro'
+import React from '../components/pins/React.astro'
+import Socials from '../components/Socials.astro'
+import TypeScript from '../components/pins/TypeScript.astro'
+import ProejctCms from '../components/index/ProejctCms.astro'
+import ProjectCards from '../components/index/ProjectCards.astro'
+import ProjectDockerIrl from '../components/index/ProjectDockerIrl.astro'
+import ProjectInfiniteMaze from '../components/index/ProjectInfiniteMaze.astro'
+import ProjectTuringMachineApp from '../components/index/ProjectTuringMachineApp.astro'
+import Layout from '../layouts/Layout.astro'
+import ProjectDiscordChessBot from '../components/index/ProjectDiscordChessBot.astro'
+---
+
+<Layout>
+  <div>
+    <div class="container flex flex-col mx-auto xl:flex-row">
+      <div
+        class="flex flex-col flex-wrap mt-16 xl:w-7/12 md:mt-24 sm:flex-row 2xl:w-1/2"
+      >
+        <div class="mx-auto max-h-56 max-w-56 sm:mx-4">
+          <Image
+            class="maxwebsite-photo-of-me"
+            src={photoOfMe}
+            alt="Photo of me"
+          />
+        </div>
+
+        <div class="mx-4">
+          <h1
+            class="mt-8 text-4xl font-bold text-center text-gray-900 maxwebsite-font-title md:text-5xl sm:text-left sm:mt-0"
+          >
+            Maksim Kulagin
+          </h1>
+          <h2
+            class="text-2xl font-light text-center text-gray-800 md:text-3xl sm:text-left"
+          >
+            Backend Engineer | <span class="text-xl md:text-2xl"
+              >Vilnius, Lithuania</span
+            >
+          </h2>
+
+          <div class="flex justify-center mt-8 sm:justify-start">
+            <Socials />
+          </div>
+        </div>
+      </div>
+
+      {/* default: flex-col, md: flex-row, xl: flex-col */}
+      <div
+        class="flex flex-col mx-3 mt-16 xl:w-5/12 md:gap-10 xl:gap-0 xl:flex-col md:flex-row md:mt-24 2xl:w-1/2"
+      >
+        <div class="md:w-1/2 xl:w-auto">
+          <h3
+            class="text-3xl font-semibold text-gray-700 maxwebsite-font-title"
+          >
+            About me
+          </h3>
+          <p class="mt-3 text-justify">
+            I'm a backend engineer, currently studying Masters degree in
+            Software Engineering. I work professionally with Ruby on Rails, but
+            feel myself confident with React and .NET too. I enjoy movies, video
+            games and working on personal projects 🧑‍💻
+          </p>
+        </div>
+
+        <div class="md:w-1/2 xl:w-auto">
+          <h3
+            class="mt-6 text-3xl font-semibold text-gray-700 maxwebsite-font-title md:mt-0 xl:mt-8"
+          >
+            Skills
+          </h3>
+          <ul
+            class="flex flex-wrap items-center justify-between gap-6 mt-3 2xl:justify-center 2xl:gap-16"
+          >
+            <li>
+              <div class="flex items-center justify-center h-16">
+                <Rails size="size-16" />
+              </div>
+              <p class="text-xs font-bold text-center">Rails</p>
+            </li>
+
+            <li>
+              <div class="flex items-center justify-center h-16">
+                <DotNet size="size-20" />
+              </div>
+              <p class="text-xs font-bold text-center">.Net</p>
+            </li>
+
+            <li>
+              <div class="flex items-center justify-center h-16">
+                <React size="size-12" />
+              </div>
+              <p class="text-xs font-bold text-center">React</p>
+            </li>
+
+            <li>
+              <div class="flex items-center justify-center h-16">
+                <TypeScript size="size-12" />
+              </div>
+              <p class="text-xs font-bold text-center">TypeScript</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mx-auto">
+      <h3
+        class="mx-3 mt-12 mb-8 text-3xl font-semibold text-gray-700 maxwebsite-font-title md:mt-24 xl:mt-24"
+      >
+        Projects
+      </h3>
+    </div>
+
+    <ProejctCms />
+
+    <ProjectCards />
+
+    <ProjectDockerIrl />
+
+    <div class="relative w-full h-0">
+      <svg
+        class="relative"
+        id="visual"
+        viewBox="0 0 900 100"
+        width="100%"
+        preserveAspectRatio="none"
+        height="100"
+        style={{ top: '-50' }}
+        xmlns="http://www.w3.org/2000/svg"
+        version="1.1"
+      >
+        <rect x="0" y="0" width="900" height="100" fill="#000000"></rect>
+        <path
+          d="M0 52L64 60L129 46L193 43L257 58L321 74L386 62L450 48L514 74L579 64L643 52L707 72L771 74L836 62L900 67L900 0L836 0L771 0L707 0L643 0L579 0L514 0L450 0L386 0L321 0L257 0L193 0L129 0L64 0L0 0Z"
+          fill="#2496ED"
+          stroke-linecap="square"
+          stroke-linejoin="bevel"></path>
+      </svg>
+    </div>
+
+    <ProjectInfiniteMaze />
+
+    <div class="relative w-full h-0">
+      <svg
+        class="relative"
+        id="visual"
+        viewBox="0 0 900 50"
+        width="100%"
+        preserveAspectRatio="none"
+        height="100"
+        style={{ top: '-50' }}
+        xmlns="http://www.w3.org/2000/svg"
+        version="1.1"
+      >
+        <rect x="0" y="0" width="900" height="50" fill="gray"></rect>
+        <path
+          d="M0 31L82 25L164 27L245 24L327 20L409 24L491 30L573 24L655 38L736 30L818 36L900 25L900 0L818 0L736 0L655 0L573 0L491 0L409 0L327 0L245 0L164 0L82 0L0 0Z"
+          fill="#000000"
+          stroke-linecap="square"
+          stroke-linejoin="bevel"></path>
+      </svg>
+    </div>
+
+    <ProjectTuringMachineApp />
+
+    <svg width="100%" height="80" fill="#323337" style={{ background: 'grey' }}>
+      <pattern
+        id="pattern-checkers"
+        x="0"
+        y="0"
+        width="320"
+        height="160"
+        patternUnits="userSpaceOnUse"
+      >
+        <rect x="0" y="60" width="20" height="20"></rect>
+        <rect x="20" y="40" width="20" height="20"></rect>
+        <rect x="40" y="60" width="20" height="20"></rect>
+        <rect x="60" y="40" width="20" height="20"></rect>
+        <rect x="80" y="60" width="20" height="20"></rect>
+        <rect x="100" y="40" width="20" height="20"></rect>
+        <rect x="120" y="60" width="20" height="20"></rect>
+        <rect x="140" y="40" width="20" height="20"></rect>
+        <rect x="160" y="60" width="20" height="20"></rect>
+        <rect x="180" y="40" width="20" height="20"></rect>
+        <rect x="200" y="60" width="20" height="20"></rect>
+        <rect x="220" y="40" width="20" height="20"></rect>
+        <rect x="240" y="60" width="20" height="20"></rect>
+        <rect x="260" y="40" width="20" height="20"></rect>
+        <rect x="280" y="60" width="20" height="20"></rect>
+        <rect x="300" y="40" width="20" height="20"></rect>
+
+        <rect x="20" y="0" width="20" height="20"></rect>
+        <rect x="160" y="0" width="20" height="20"></rect>
+        <rect x="80" y="20" width="20" height="20"></rect>
+        <rect x="200" y="20" width="20" height="20"></rect>
+      </pattern>
+
+      <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-checkers)"
+      ></rect>
+    </svg>
+
+    <ProjectDiscordChessBot />
+
+    <div
+      class="container flex flex-col gap-16 px-3 mx-auto mt-24 mb-16 lg:flex-row"
+    >
+      <div class="lg:w-2/3">
+        <h3
+          class="mb-4 text-3xl font-semibold text-gray-700 maxwebsite-font-title"
+        >
+          Other projects
+        </h3>
+
+        <ul class="pl-6 text-justify list-disc">
+          <li class="mt-1">
+            <a
+              class="wrap-break-word link"
+              href="https://github.com/maksimoreo/maksimoreo.github.io"
+              target="_blank"
+            >
+              github.com/maksimoreo/maksimoreo.github.io
+            </a>{' '}
+            - this portfolio webpage
+          </li>
+
+          <li class="mt-1">
+            <a
+              class="wrap-break-word link"
+              href="https://github.com/mkvtech/game2048"
+              target="_blank"
+            >
+              github.com/mkvtech/game2048
+            </a>{' '}
+            - clone of a popular{' '}
+            <a
+              class="link"
+              href="https://en.wikipedia.org/wiki/2048_(video_game)"
+              target="_blank"
+            >
+              2048 puzzle game
+            </a>
+            , written in Java and JavaFX
+          </li>
+
+          <li class="mt-1">
+            <a
+              class="wrap-break-word link"
+              href="https://github.com/maksimoreo/ruby-mastermind"
+              target="_blank"
+            >
+              github.com/maksimoreo/ruby-mastermind
+            </a>{' '}
+            - Mastermind terminal puzzle game implementation in Ruby. Works in browser:{
+              ' '
+            }
+            <a
+              class="link"
+              href="https://maksimoreo.github.io/ruby-mastermind/"
+              target="_blank"
+            >
+              here
+            </a>
+          </li>
+
+          <li class="mt-1">
+            Please see more projects on my GitHub profiles:{' '}
+            <a
+              class="wrap-break-word link"
+              href="https://github.com/maksimoreo"
+              target="_blank"
+            >
+              github.com/maksimoreo
+            </a>{' '}
+            and{' '}
+            <a
+              class="wrap-break-word link"
+              href="https://github.com/mkvtech"
+              target="_blank"
+            >
+              github.com/mkvtech
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="lg:w-1/3">
+        <h3
+          class="mb-4 text-3xl font-semibold text-gray-700 maxwebsite-font-title"
+        >
+          My socials
+        </h3>
+
+        <Socials />
+      </div>
+    </div>
+  </div>
+</Layout>

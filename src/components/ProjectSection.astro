@@ -1,0 +1,67 @@
+---
+import clsx from 'clsx'
+
+interface Props {
+  backgroundColor: string
+  isTextLeft?: boolean
+
+  demoClasses?: string | string[]
+  titleTextColor?: string
+  titleClasses?: string | string[]
+
+  descriptionTextColor?: string
+  descriptionClasses?: string | string[]
+}
+
+const {
+  backgroundColor,
+  isTextLeft,
+  demoClasses,
+  titleTextColor,
+  titleClasses,
+  descriptionTextColor,
+  descriptionClasses,
+} = Astro.props
+---
+
+<div style={{ backgroundColor: backgroundColor }}>
+  <div
+    class="container flex flex-col gap-4 px-3 py-32 mx-auto lg:py-32 xl:py-48 lg:flex-row"
+  >
+    <div
+      class={clsx('lg:flex-1', demoClasses, {
+        'lg:order-2': isTextLeft,
+      })}
+    >
+      <slot name="demo" />
+    </div>
+
+    <div
+      class={clsx(
+        'lg:flex-1',
+        descriptionClasses,
+        isTextLeft ? 'lg:mr-24' : 'lg:ml-24',
+      )}
+      style={descriptionTextColor ? { color: descriptionTextColor } : undefined}
+    >
+      <h4
+        class={clsx('text-3xl font-bold maxwebsite-font-title', titleClasses)}
+        style={titleTextColor ? { color: titleTextColor } : undefined}
+      >
+        <slot name="title" />
+      </h4>
+
+      <p>
+        <slot name="short-description" />
+      </p>
+
+      <div class="flex flex-wrap gap-3 mt-4">
+        <slot name="pins" />
+      </div>
+
+      <div class="mt-4">
+        <slot name="description" />
+      </div>
+    </div>
+  </div>
+</div>

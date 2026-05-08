@@ -1,0 +1,49 @@
+---
+import ExternalSite from '../ExternalSite.astro'
+import Csharp from '../pins/Csharp.astro'
+import Unity from '../pins/Unity.astro'
+import ProjectSection from '../ProjectSection.astro'
+---
+
+<ProjectSection
+  backgroundColor="black"
+  demoClasses={'maxwebsite-demo-infinite-maze'}
+  titleClasses={'text-gray-200'}
+  descriptionClasses={'text-gray-300'}
+>
+  <Fragment slot="title">🧙 Infinite Maze</Fragment>
+
+  <Fragment slot="short-description">Good luck finding the exit.</Fragment>
+
+  <Fragment slot="pins">
+    <Unity variant="white" />
+    <Csharp />
+  </Fragment>
+
+  <Fragment slot="description">
+    <p>Features:</p>
+    <ul>
+      <li>😵‍💫 Unique maze solving experience</li>
+      <li>
+        📱 Playable in browser and on mobile:{' '}
+        <a
+          class="link-white"
+          href="https://maksimoreo.github.io/InfiniteMaze/"
+          target="_blank"
+        >
+          PLAY
+        </a>
+      </li>
+    </ul>
+
+    <p class="mt-6 mr-4 text-right">
+      <a
+        href="https://github.com/maksimoreo/InfiniteMaze/"
+        class="link-white"
+        target="_blank"
+      >
+        GitHub <ExternalSite />
+      </a>
+    </p>
+  </Fragment>
+</ProjectSection>

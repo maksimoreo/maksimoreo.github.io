@@ -1,0 +1,80 @@
+---
+import ProjectSection from '../ProjectSection.astro'
+import demoVtjmk from '../../assets/demo-vtjmk.mp4'
+import Mui from '../pins/Mui.astro'
+import Playwright from '../pins/Playwright.astro'
+import Rails from '../pins/Rails.astro'
+import React from '../pins/React.astro'
+import ExternalSite from '../ExternalSite.astro'
+---
+
+<ProjectSection
+  backgroundColor="#034ECC"
+  isTextLeft={true}
+  titleClasses={'text-gray-200'}
+  descriptionClasses={'text-gray-300'}
+>
+  <video slot="demo" autoplay loop muted playsinline>
+    <source src={demoVtjmk} type="video/mp4" />
+  </video>
+
+  <Fragment slot="title">🧑‍🎓 Conference Management System</Fragment>
+
+  <Fragment slot="short-description"
+    >A web app to manage conferences, events, registrations, papers, reviews and
+    related documents.</Fragment
+  >
+
+  <Fragment slot="pins">
+    <Rails size="size-4" withLabel={true} />
+    <Mui />
+    <React size="size-4" withLabel={true} />
+    <Playwright />
+  </Fragment>
+
+  <Fragment slot="description">
+    <p>Features:</p>
+
+    <ul>
+      <li class="text-justify">🔑 Authentication and Authorization</li>
+      <li class="text-justify">
+        📝 Rich text editor for user-entered content in multiple languages
+      </li>
+      <li class="text-justify">
+        📃 MS Word and PDF file generation from user uploaded template
+      </li>
+      <li class="text-justify">
+        🧪{' '}
+        <a
+          class="link-white"
+          href="https://github.com/mkvtech/vtjmk/actions"
+          target="_blank"
+        >
+          GitHub Actions
+        </a>{' '}
+        CI with multiple workflows testing all features of the app
+      </li>
+    </ul>
+
+    <p class="mt-6 text-justify">
+      Conference Management System helps to automate common workflows for
+      conference organizers. It simplifies workflows for multiple roles:
+      conference organizers, researchers and reviewers. Conference organizers
+      can create events and provide details in multiple languages, Researchers
+      can submit their papers for review by multiple automatically assigned
+      reviewers. the web app also allows to generate common paper work documents
+      like participation certificate and participants list from templates
+      uploaded by conference organizers. This is my PhD project.
+    </p>
+
+    <p class="mt-6 mr-4 text-right">
+      <a
+        href="https://github.com/mkvtech/vtjmk/"
+        class="link-white"
+        target="_blank"
+      >
+        GitHub <ExternalSite />
+      </a>
+    </p>
+  </Fragment>
+</ProjectSection>

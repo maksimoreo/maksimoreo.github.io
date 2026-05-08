@@ -1,0 +1,97 @@
+---
+import ExternalSite from '../ExternalSite.astro'
+import demoDockerIrl from '../../assets/demo-dockerirl.mp4'
+import Csharp from '../pins/Csharp.astro'
+import Docker from '../pins/Docker.astro'
+import Unity from '../pins/Unity.astro'
+import ProjectSection from '../ProjectSection.astro'
+---
+
+<ProjectSection
+  backgroundColor="#2496ED"
+  isTextLeft={true}
+  titleClasses={'text-gray-200'}
+  descriptionClasses={'text-gray-300'}
+>
+  <video slot="demo" autoplay loop muted playsinline>
+    <source src={demoDockerIrl} type="video/mp4" />
+  </video>
+
+  <Fragment slot="title">⚓ DockerIRL</Fragment>
+
+  <Fragment slot="short-description"
+    >A modern full-featured progressive Docker management 3D software to replace
+    your current cheap 2D electron app.</Fragment
+  >
+
+  <Fragment slot="pins">
+    <Unity variant="white" />
+    <Csharp />
+    <Docker size="size-4" withLabel={true} />
+  </Fragment>
+
+  <Fragment slot="description">
+    <p>Features:</p>
+    <ul>
+      <li>🐋 Synchronisation with Docker engine</li>
+      <li>
+        🖥️{' '}
+        <a
+          class="link-white"
+          href="https://en.wikipedia.org/wiki/Pseudoterminal"
+        >
+          PTY
+        </a>
+        -based terminal implementation in Unity
+      </li>
+    </ul>
+
+    <p class="mt-6 text-justify">
+      App automatically synchronises with Docker engine and places and removes
+      3D containers models as they appear and disappear in the engine.
+      Synchronisation is implemented by reading Docker engine logs in real time
+      and additionally querying containers every few seconds. By default,
+      containers in DockerIRL spawn with 2 terminals attached: one for observing
+      logs and other to connect to container's shell, but this default template
+      can be configured. Surprisingly, the most challenging part of this project
+      was implementing the terminal. As terminal emulation is more complicated
+      task than it first appears, it was decided to use a dedicated library:{
+        ' '
+      }
+      <a
+        class="link-white"
+        href="https://github.com/darrenstarr/VtNetCore"
+        target="_blank"
+      >
+        VtNetCore
+      </a>
+      . Other libraries used in the project include{' '}
+      <a
+        class="link-white"
+        href="https://github.com/dotnet/Docker.DotNet"
+        target="_blank"
+      >
+        Docker.DotNet
+      </a>{' '}
+      and{' '}
+      <a
+        class="link-white"
+        href="https://devblogs.microsoft.com/commandline/windows-command-line-introducing-the-windows-pseudo-console-conpty/"
+        target="_blank"
+      >
+        ConPTY
+      </a>
+      .
+    </p>
+
+    <p class="mt-6 mr-4 text-right">
+      <a
+        href="https://github.com/maksimoreo/DockerIRL/"
+        class="link-white"
+        target="_blank"
+      >
+        GitHub <ExternalSite />
+      </a>
+    </p>
+  </Fragment>
+</ProjectSection>

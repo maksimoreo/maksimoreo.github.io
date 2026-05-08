@@ -1,0 +1,67 @@
+---
+import ProjectSection from '../ProjectSection.astro'
+import demoCards from '../../assets/demo-cards.mp4'
+import React from '../pins/React.astro'
+import Nodejs from '../pins/Nodejs.astro'
+import Socketio from '../pins/Socketio.astro'
+import Tailwindcss from '../pins/Tailwindcss.astro'
+import ExternalSite from '../ExternalSite.astro'
+---
+
+<ProjectSection
+  backgroundColor="#171717"
+  isTextLeft={false}
+  titleClasses={'text-gray-200'}
+  descriptionClasses={'text-gray-300'}
+>
+  <video slot="demo" autoplay loop muted playsinline>
+    <source src={demoCards} type="video/mp4" />
+  </video>
+
+  <Fragment slot="title">🃏 Card Games</Fragment>
+
+  <Fragment slot="short-description"
+    >Collection of online card games to play with your friends, or in case you
+    don't have any, play with AI!{' '}
+    <span class="italic font-light" style={{ color: '#ffffff55' }}>
+      (currently includes only 1 card game)
+    </span></Fragment
+  >
+
+  <Fragment slot="pins">
+    <React size="size-4" withLabel={true} />
+    <Nodejs />
+    <Socketio />
+    <Tailwindcss />
+  </Fragment>
+
+  <Fragment slot="description">
+    <p>Features:</p>
+    <ul>
+      <li>💬 Chat, rooms</li>
+      <li>📱 Responsive UI</li>
+      <li>
+        🃏{' '}
+        <a
+          class="link-white"
+          href="https://en.wikipedia.org/wiki/6_nimmt!"
+          target="_blank"
+        >
+          6 nimmt!
+        </a>{' '}
+        game
+      </li>
+      <li>🌐 Playable in browser</li>
+    </ul>
+
+    <p class="mt-6 mr-4 text-right">
+      <a
+        href="https://github.com/maksimoreo/cards/"
+        class="link-white"
+        target="_blank"
+      >
+        GitHub <ExternalSite />
+      </a>
+    </p>
+  </Fragment>
+</ProjectSection>

@@ -1,0 +1,73 @@
+---
+import ProjectSection from '../ProjectSection.astro'
+import demoDiscordChessBot from '../../assets/demo-discord-chess-bot-2.mp4'
+import Ruby from '../pins/Ruby.astro'
+import Discord from '../pins/Discord.astro'
+import ExternalSite from '../ExternalSite.astro'
+---
+
+<ProjectSection
+  backgroundColor="#323337"
+  isTextLeft={false}
+  titleClasses={'text-gray-200'}
+  descriptionClasses={'text-gray-300'}
+>
+  <video slot="demo" autoplay loop muted playsinline>
+    <source src={demoDiscordChessBot} type="video/mp4" />
+  </video>
+
+  <Fragment slot="title">♟️ Discord Chess Bot</Fragment>
+
+  <Fragment slot="short-description">Discord bot to play chess with</Fragment>
+
+  <Fragment slot="pins">
+    <Ruby size="size-4" withLabel={true} />
+    <span class="font-bold">ImageMagick</span>
+    <Discord />
+  </Fragment>
+
+  <Fragment slot="description">
+    <p>Features:</p>
+    <ul>
+      <li>✋ Vote system where players vote for their next move</li>
+      <li>
+        🤖 Integration with a chess engine (like{' '}
+        <a
+          class="link-white"
+          href="https://stockfishchess.org/"
+          target="_blank"
+        >
+          Stockfish
+        </a>
+        ) using{' '}
+        <a
+          class="link-white"
+          href="https://en.wikipedia.org/wiki/Universal_Chess_Interface"
+          target="_blank"
+        >
+          UCI protocol
+        </a>
+      </li>
+      <li>
+        🖼️ Chessboard image generation using{' '}
+        <a
+          class="link-white"
+          href="https://imagemagick.org/index.php"
+          target="_blank"
+        >
+          ImageMagick
+        </a>
+      </li>
+    </ul>
+
+    <p class="mt-6 mr-4 text-right">
+      <a
+        href="https://github.com/maksimoreo/chess-dc-bot"
+        class="link-white"
+        target="_blank"
+      >
+        GitHub <ExternalSite />
+      </a>
+    </p>
+  </Fragment>
+</ProjectSection>

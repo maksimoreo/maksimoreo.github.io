@@ -1,0 +1,52 @@
+---
+import ProjectSection from '../ProjectSection.astro'
+import demoTuringMachineApp from '../../assets/demo-turing-machine-app.png'
+import Csharp from '../pins/Csharp.astro'
+import DotNet from '../pins/DotNet.astro'
+import ExternalSite from '../ExternalSite.astro'
+import { Image } from 'astro:assets'
+---
+
+<ProjectSection
+  backgroundColor="gray"
+  isTextLeft={true}
+  titleClasses={'text-gray-200'}
+  descriptionClasses={'text-gray-300'}
+>
+  <Image
+    slot="demo"
+    src={demoTuringMachineApp}
+    alt="Screenshot of TuringMachineApp"
+  />
+
+  <Fragment slot="title">🤓 Turing Machine Emulator</Fragment>
+
+  <Fragment slot="short-description"
+    >Implementation of Turing Machine that can run multiple TMs in parallel</Fragment
+  >
+
+  <Fragment slot="pins">
+    <Csharp />
+    <DotNet size="size-5" />
+    <span class="font-bold">WPF</span>
+  </Fragment>
+
+  <Fragment slot="description">
+    <p>Features:</p>
+    <ul>
+      <li>🚦 Execution of multiple TM instances in parallel</li>
+      <li>⛔ Thorough control and examine of each TM instance</li>
+      <li>📄 Loading instruction set from file</li>
+    </ul>
+
+    <p class="mt-6 mr-4 text-right">
+      <a
+        href="https://github.com/maksimoreo/TuringMachineApp/"
+        class="link-white"
+        target="_blank"
+      >
+        GitHub <ExternalSite />
+      </a>
+    </p>
+  </Fragment>
+</ProjectSection>
