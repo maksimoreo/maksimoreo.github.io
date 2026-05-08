@@ -5,7 +5,6 @@ interface Props {
   backgroundColor: string
   isTextLeft?: boolean
 
-  demoClasses?: string | string[]
   titleTextColor?: string
   titleClasses?: string | string[]
 
@@ -16,7 +15,6 @@ interface Props {
 const {
   backgroundColor,
   isTextLeft,
-  demoClasses,
   titleTextColor,
   titleClasses,
   descriptionTextColor,
@@ -29,7 +27,7 @@ const {
     class="container flex flex-col gap-4 px-3 py-32 mx-auto lg:py-32 xl:py-48 lg:flex-row"
   >
     <div
-      class={clsx('lg:flex-1', demoClasses, {
+      class={clsx('lg:flex-1', {
         'lg:order-2': isTextLeft,
       })}
     >

@@ -7,10 +7,17 @@ import ProjectSection from '../ProjectSection.astro'
 
 <ProjectSection
   backgroundColor="black"
-  demoClasses={'maxwebsite-demo-infinite-maze'}
   titleClasses={'text-gray-200'}
   descriptionClasses={'text-gray-300'}
 >
+  <a
+    slot="demo"
+    class="maxwebsite-demo-infinite-maze block"
+    href="https://maksimoreo.github.io/InfiniteMaze/"
+    target="_blank"
+  >
+  </a>
+
   <Fragment slot="title">🧙 Infinite Maze</Fragment>
 
   <Fragment slot="short-description">Good luck finding the exit.</Fragment>
