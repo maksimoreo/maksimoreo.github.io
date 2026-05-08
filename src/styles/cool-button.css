@@ -1,0 +1,53 @@
+@import 'tailwindcss';
+
+@property --cool-button-angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes rotate {
+    to {
+        --cool-button-angle: 360deg;
+    }
+}
+
+.cool-button {
+    @apply text-gray-200 px-3 py-1;
+
+    font-weight: bold;
+
+    --cool-button-angle: 0deg;
+
+    transition:
+        background-color 150ms,
+        background-image 150ms,
+        color 150ms;
+
+    background-color: none;
+    background-image:
+        linear-gradient(to right, #000, #000),
+        conic-gradient(
+            from var(--cool-button-angle),
+            #555 0%,
+            #eee 0%,
+            #eee 20%,
+            #555 20%,
+            #555 50%,
+            #eee 50%,
+            #eee 70%,
+            #555 70%
+        );
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    animation: rotate 4s linear infinite;
+    border-radius: 8px;
+}
+
+.cool-button:hover {
+    background-color: white;
+    background-image: none;
+    color: black;
+}
