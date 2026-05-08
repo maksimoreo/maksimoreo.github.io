@@ -1,0 +1,84 @@
+---
+import ProjectSection from '../ProjectSection.astro'
+import demoCanvasNewTab from '../../assets/demo-canvas-new-tab.mp4'
+import React from '../pins/React.astro'
+import Wxt from '../pins/Wxt.astro'
+import ExternalSite from '../ExternalSite.astro'
+import CanvasNewTabLogo from '../../assets/canvas-new-tab-logo.svg'
+import ShadcnUi from '../pins/ShadcnUi.astro'
+---
+
+<ProjectSection
+  backgroundClasses="project-cnt-bg-grid"
+  titleClasses={'text-gray-900'}
+  descriptionClasses={'text-gray-800 bg-white project-cnt-bg-fade-out'}
+>
+  <video slot="demo" autoplay loop muted playsinline>
+    <source src={demoCanvasNewTab} type="video/mp4" />
+  </video>
+
+  <Fragment slot="title">
+    <CanvasNewTabLogo width="32" height="32" class="inline" />
+    CanvasNewTab
+  </Fragment>
+
+  <Fragment slot="short-description"
+    >Replaces default home page with Canvas tab that you can design yourself.</Fragment
+  >
+
+  <Fragment slot="pins">
+    <React size="size-4" withLabel textColorClass={'text-gray-900'} />
+    <ShadcnUi />
+    <Wxt />
+  </Fragment>
+
+  <Fragment slot="description">
+    <p>Features:</p>
+
+    <ul>
+      <li class="text-justify">📝 Home page editor right in the browser</li>
+      <li class="text-justify">
+        🤏 Drag, resize, group multiple items at once
+      </li>
+      <li class="text-justify">🪄 Multi-item UI inputs</li>
+    </ul>
+
+    <p class="mt-6 text-justify">
+      CanvasNewTab replaces your browser's default home tab with a clean,
+      customizable space that's entirely your own. Its intuitive editor gives
+      you full control: place bookmarks anywhere, group them together, apply a
+      favorite color theme, or style each bookmark individually. You can jump
+      into edit mode right from the home tab and make quick updates using handy
+      multi-item tools. With CanvasNewTab, your new home tab becomes a blend of
+      productivity and personal style.
+    </p>
+
+    <p class="mt-6 mr-4 text-right">
+      <a
+        href="https://github.com/maksimoreo/canvas-new-tab"
+        class="link"
+        target="_blank"
+      >
+        GitHub <ExternalSite />
+      </a>
+    </p>
+  </Fragment>
+</ProjectSection>
+
+<style is:global>
+  .project-cnt-bg-grid {
+    background-size: 40px 40px;
+
+    /* line grid */
+    /* background-image:
+      linear-gradient(to right, #eee 1px, transparent 1px),
+      linear-gradient(to bottom, #eee 1px, transparent 1px); */
+
+    /* dot grid */
+    background-image: radial-gradient(circle, #777 1px, transparent 1px);
+  }
+
+  .project-cnt-bg-fade-out {
+    box-shadow: 0 0 80px 50px #ffffff;
+  }
+</style>
