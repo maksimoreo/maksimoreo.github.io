@@ -1,0 +1,81 @@
+@property --cool-button-angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes rotate {
+    to {
+        --cool-button-angle: 360deg;
+    }
+}
+
+.cool-button {
+    --cool-button-angle: 0deg;
+
+    padding: 0.25rem 0.75rem;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+
+    animation: rotate 4s linear infinite;
+
+    transition:
+        background-color 150ms,
+        background-image 150ms,
+        color 150ms;
+
+    // black
+    &--black {
+        color: #e5e7eb;
+        background-color: transparent;
+        background-image:
+            linear-gradient(to right, #000, #000),
+            conic-gradient(
+                from var(--cool-button-angle),
+                #555 0%,
+                #eee 0%,
+                #eee 20%,
+                #555 20%,
+                #555 50%,
+                #eee 50%,
+                #eee 70%,
+                #555 70%
+            );
+
+        &:hover {
+            background-color: white;
+            background-image: none;
+            color: black;
+        }
+    }
+
+    // white
+    &--white {
+        color: #111;
+        background-color: transparent;
+        background-image:
+            linear-gradient(to right, #fff, #fff),
+            conic-gradient(
+                from var(--cool-button-angle),
+                #bbb 0%,
+                #222 0%,
+                #222 20%,
+                #bbb 20%,
+                #bbb 50%,
+                #222 50%,
+                #222 70%,
+                #bbb 70%
+            );
+
+        &:hover {
+            background-color: black;
+            background-image: none;
+            color: white;
+        }
+    }
+}
