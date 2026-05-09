@@ -1,6 +1,4 @@
 ---
-import clsx from 'clsx'
-
 interface Props {
   size: 'size-4' | 'size-16'
   withLabel?: boolean | null | undefined
@@ -11,7 +9,7 @@ const { size, withLabel } = Astro.props
 
 <span class="font-bold text-gray-300">
   <svg
-    class={clsx('inline maxwebsite-inline-icon', size)}
+    class:list={['inline maxwebsite-inline-icon', size]}
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"

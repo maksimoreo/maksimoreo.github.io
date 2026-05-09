@@ -1,6 +1,4 @@
 ---
-import clsx from 'clsx'
-
 interface Props {
   backgroundClasses?: string
   backgroundColor?: string
@@ -28,24 +26,20 @@ const {
   <div
     class="container flex flex-col gap-4 px-3 py-32 mx-auto lg:py-32 xl:py-48 lg:flex-row"
   >
-    <div
-      class={clsx('lg:flex-1', {
-        'lg:order-2': isTextLeft,
-      })}
-    >
+    <div class:list={['lg:flex-1', isTextLeft && 'lg:order-2']}>
       <slot name="demo" />
     </div>
 
     <div
-      class={clsx(
+      class:list={[
         'lg:flex-1',
         descriptionClasses,
         isTextLeft ? 'lg:mr-24' : 'lg:ml-24',
-      )}
+      ]}
       style={descriptionTextColor ? { color: descriptionTextColor } : undefined}
     >
       <h4
-        class={clsx('text-3xl font-bold maxwebsite-font-title', titleClasses)}
+        class:list={['text-3xl font-bold maxwebsite-font-title', titleClasses]}
         style={titleTextColor ? { color: titleTextColor } : undefined}
       >
         <slot name="title" />

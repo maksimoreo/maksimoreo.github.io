@@ -1,6 +1,4 @@
 ---
-import clsx from 'clsx'
-
 interface Props {
   size: 'size-4' | 'size-12'
   withLabel?: boolean
@@ -14,7 +12,7 @@ const fill = color === 'originalBlue' ? '#2496ED' : 'white'
 
 <span class="font-bold">
   <svg
-    class={clsx('inline maxwebsite-inline-icon', size)}
+    class:list={['inline maxwebsite-inline-icon', size]}
     fill={fill}
     role="img"
     viewBox="0 0 24 24"
