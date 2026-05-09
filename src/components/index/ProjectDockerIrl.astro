@@ -13,9 +13,16 @@ import ProjectSection from '../ProjectSection.astro'
   titleClasses={'text-gray-200'}
   descriptionClasses={'text-gray-300'}
 >
-  <video slot="demo" autoplay loop muted playsinline>
-    <source src={demoDockerIrl} type="video/mp4" />
-  </video>
+  <Fragment slot="demo">
+    <video id="docker-irl-video" autoplay loop muted playsinline>
+      <source src={demoDockerIrl} type="video/mp4" />
+    </video>
+
+    <progress
+      id="docker-irl-video-progress-bar"
+      class="video-progress-bar"
+      max="100"></progress>
+  </Fragment>
 
   <Fragment slot="title">⚓ DockerIRL</Fragment>
 
@@ -95,3 +102,9 @@ import ProjectSection from '../ProjectSection.astro'
     </p>
   </Fragment>
 </ProjectSection>
+
+<script>
+  import { startVideoProgressBar } from '../../scripts/video-progress-bar'
+
+  startVideoProgressBar('docker-irl-video')
+</script>

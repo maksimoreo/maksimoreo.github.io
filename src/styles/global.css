@@ -38,3 +38,23 @@
 .link-white {
     @apply text-gray-200 underline hover:text-white;
 }
+
+.video-progress-bar {
+    display: block;
+    height: 4px;
+    width: 100%;
+}
+
+.video-progress-bar::-webkit-progress-bar {
+    background-color: transparent;
+}
+
+.video-progress-bar::-webkit-progress-value {
+    border-radius: 2px;
+    background-color: #eee;
+}
+
+.video-progress-bar-value-black::-webkit-progress-value {
+    border-radius: 2px;
+    background-color: #222;
+}

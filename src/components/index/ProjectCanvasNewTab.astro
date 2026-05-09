@@ -13,9 +13,16 @@ import ShadcnUi from '../pins/ShadcnUi.astro'
   titleClasses={'text-gray-900'}
   descriptionClasses={'text-gray-800 bg-white project-cnt-bg-fade-out'}
 >
-  <video slot="demo" autoplay loop muted playsinline>
-    <source src={demoCanvasNewTab} type="video/mp4" />
-  </video>
+  <Fragment slot="demo">
+    <video id="canvas-new-tab-video" autoplay loop muted playsinline>
+      <source src={demoCanvasNewTab} type="video/mp4" />
+    </video>
+
+    <progress
+      id="canvas-new-tab-video-progress-bar"
+      class="video-progress-bar video-progress-bar-value-black"
+      max="100"></progress>
+  </Fragment>
 
   <Fragment slot="title">
     <CanvasNewTabLogo width="32" height="32" class="inline" />
@@ -90,3 +97,9 @@ import ShadcnUi from '../pins/ShadcnUi.astro'
     box-shadow: 0 0 80px 50px #ffffff;
   }
 </style>
+
+<script>
+  import { startVideoProgressBar } from '../../scripts/video-progress-bar'
+
+  startVideoProgressBar('canvas-new-tab-video')
+</script>
