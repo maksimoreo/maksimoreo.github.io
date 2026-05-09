@@ -16,6 +16,7 @@ import Layout from '../layouts/Layout.astro'
 import ProjectDiscordChessBot from '../components/index/ProjectDiscordChessBot.astro'
 import ProjectCanvasNewTab from '../components/index/ProjectCanvasNewTab.astro'
 import ProejctMaxes from '../components/index/ProejctMaxes.astro'
+import Python from '../components/pins/Python.astro'
 ---
 
 <Layout>
@@ -77,31 +78,41 @@ import ProejctMaxes from '../components/index/ProejctMaxes.astro'
             Skills
           </h3>
           <ul
-            class="flex flex-wrap items-center justify-between gap-6 mt-3 2xl:justify-center 2xl:gap-16"
+            class="flex flex-wrap items-center justify-center gap-y-2 gap-x-8 mt-3 2xl:gap-x-16"
           >
             <li>
-              <div class="flex items-center justify-center h-16">
+              <div class="flex items-center justify-center w-16 h-16">
                 <Rails size="size-16" />
               </div>
               <p class="text-xs font-bold text-center">Rails</p>
             </li>
 
             <li>
-              <div class="flex items-center justify-center h-16">
+              <div class="flex items-center justify-center w-16 h-16">
+                <Python size="size-16" />
+              </div>
+              <p class="text-xs font-bold text-center">Python</p>
+            </li>
+
+            <li>
+              <div class="flex items-center justify-center w-16 h-16">
                 <DotNet size="size-20" />
               </div>
               <p class="text-xs font-bold text-center">.Net</p>
             </li>
 
+            <!-- class="h-0 hidden md:block lg:hidden" -->
+            <div class="skills-section-flex-break"></div>
+
             <li>
-              <div class="flex items-center justify-center h-16">
+              <div class="flex items-center justify-center w-16 h-16">
                 <React size="size-12" />
               </div>
               <p class="text-xs font-bold text-center">React</p>
             </li>
 
             <li>
-              <div class="flex items-center justify-center h-16">
+              <div class="flex items-center justify-center w-16 h-16">
                 <TypeScript size="size-12" />
               </div>
               <p class="text-xs font-bold text-center">TypeScript</p>
@@ -307,3 +318,32 @@ import ProejctMaxes from '../components/index/ProejctMaxes.astro'
     </div>
   </div>
 </Layout>
+
+<style>
+  .skills-section-flex-break {
+    display: block;
+    height: 0;
+    flex-basis: 100%;
+  }
+
+  /* need a smaller breakpoint that TailwindCSS's smallest "sm" */
+  @media (min-width: 500px) {
+    .skills-section-flex-break {
+      display: none;
+    }
+  }
+
+  /* md: */
+  @media (min-width: 48rem) {
+    .skills-section-flex-break {
+      display: block;
+    }
+  }
+
+  /* lg: */
+  @media (min-width: 64rem) {
+    .skills-section-flex-break {
+      display: none;
+    }
+  }
+</style>
