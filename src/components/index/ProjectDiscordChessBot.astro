@@ -23,7 +23,7 @@ import ExternalSite from '../ExternalSite.astro'
 
   <Fragment slot="title">♟️ Discord Chess Bot</Fragment>
 
-  <Fragment slot="short-description">Discord bot to play chess with</Fragment>
+  <Fragment slot="short-description">A Discord bot to play chess with</Fragment>
 
   <Fragment slot="pins">
     <Ruby size="size-4" withLabel={true} />
@@ -34,35 +34,35 @@ import ExternalSite from '../ExternalSite.astro'
   <Fragment slot="description">
     <p>Features:</p>
     <ul>
-      <li>✋ Vote system where players vote for their next move</li>
+      <li>✋ Vote-based multiplayer move selection</li>
       <li>
-        🤖 Integration with a chess engine (like{' '}
-        <a
-          class="link-white"
-          href="https://stockfishchess.org/"
-          target="_blank"
-        >
-          Stockfish</a
-        >) using{' '}
-        <a
+        🤖 Chess engine integration using <a
           class="link-white"
           href="https://en.wikipedia.org/wiki/Universal_Chess_Interface"
-          target="_blank"
+          target="_blank">UCI protocol</a
         >
-          UCI protocol
-        </a>
       </li>
       <li>
-        🖼️ Chessboard image generation using{' '}
+        🖼️ Chessboard image generation with{' '}
         <a
           class="link-white"
           href="https://imagemagick.org/index.php"
-          target="_blank"
+          target="_blank">ImageMagick</a
         >
-          ImageMagick
-        </a>
       </li>
     </ul>
+
+    <p class="mt-6 text-justify">
+      Discord Chess Bot enables asynchronous multiplayer chess games inside
+      Discord. Players can collaborate by voting on moves, while optional engine
+      integration allows games against AI opponents such as <a
+        class="link-white"
+        href="https://stockfishchess.org/"
+        target="_blank">Stockfish</a
+      >. The bot automatically generates updated chessboard images after each
+      move, providing a seamless gameplay experience directly within Discord
+      chats. Supports multiplayer sessions with up to 50 players.
+    </p>
 
     <div class="mt-6 mr-4 flex justify-between">
       <p class="italic font-light text-gray-400">2020, December</p>

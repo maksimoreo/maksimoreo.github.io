@@ -15,10 +15,10 @@ import Jupyter from '../pins/Jupyter.astro'
 >
   <Carousel slot="demo" />
 
-  <Fragment slot="title">📄 XES Log Generator </Fragment>
+  <Fragment slot="title">📄 XES Log Generator</Fragment>
 
   <Fragment slot="short-description"
-    >Generates domain-specific XES logs from just a sample</Fragment
+    >Generates domain-specific XES logs from a sample dataset</Fragment
   >
 
   <Fragment slot="pins">
@@ -31,22 +31,23 @@ import Jupyter from '../pins/Jupyter.astro'
     <p>Features:</p>
 
     <ul>
-      <li class="text-justify">🔬 XES file analysis with graphs and stuff</li>
+      <li class="text-justify">🔬 XES file analysis and visualization tools</li>
       <li class="text-justify">
         🖥️ Native desktop UI for configuration and analysis
       </li>
-      <li class="text-justify">🏗️ XES file generation</li>
+      <li class="text-justify">🏗️ Synthetic XES file generation</li>
     </ul>
 
     <p class="mt-6 text-justify">
-      Maxes XES file generator analyses a sample XES file, and allows to
-      generate similar close-to-original log files, preserving original
-      attribute domain area, value ranges, traces sizes. The goal is to allow
-      users to expand or reduce provided log journal and use generated samples
-      for various purposes, for example to test performance of other XES
-      analysis tools. The project includes Qt desktop app and CLI for XES files
-      generation as well as notebooks with experiments. This is my Master's
-      Project.
+      XES file generator analyses a sample XES file and generates new log files
+      that preserve the statistical properties and structure of the original
+      dataset, including attribute domains, value ranges and trace sizes. The
+      tool is designed to help users expand or reduce event logs for
+      benchmarking, testing, and experimentation with process mining tools. The
+      project includes a Qt desktop application, a CLI utility, and research
+      notebooks used for experiments.
+      <br />
+      This project was developed as part of my Master's thesis.
     </p>
 
     <div class="mt-6 mr-4 flex justify-between">
