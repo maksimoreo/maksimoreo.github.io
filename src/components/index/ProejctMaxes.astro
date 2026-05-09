@@ -1,0 +1,58 @@
+---
+import ProjectSection from '../ProjectSection.astro'
+import ExternalSite from '../ExternalSite.astro'
+import Carousel from './ProjectMaxes/Carousel.astro'
+import Python from '../pins/Python.astro'
+import Qt from '../pins/Qt.astro'
+import Jupyter from '../pins/Jupyter.astro'
+---
+
+<ProjectSection
+  isTextLeft
+  backgroundClasses="bg-white"
+  titleClasses={'text-gray-900'}
+  descriptionClasses={'text-gray-800'}
+>
+  <Carousel slot="demo" />
+
+  <Fragment slot="title">📄 XES Log Generator </Fragment>
+
+  <Fragment slot="short-description"
+    >Generates domain-specific XES logs from just a sample</Fragment
+  >
+
+  <Fragment slot="pins">
+    <Python withLabel textColorClass="text-gray-900" />
+    <Qt />
+    <Jupyter />
+  </Fragment>
+
+  <Fragment slot="description">
+    <p>Features:</p>
+
+    <ul>
+      <li class="text-justify">🔬 XES file analysis with graphs and stuff</li>
+      <li class="text-justify">
+        🖥️ Native desktop UI for configuration and analysis
+      </li>
+      <li class="text-justify">🏗️ XES file generation</li>
+    </ul>
+
+    <p class="mt-6 text-justify">
+      Maxes XES file generator analyses a sample XES file, and allows to
+      generate similar close-to-original log files, preserving original
+      attribute domain area, value ranges, traces sizes. The goal is to allow
+      users to expand or reduce provided log journal and use generated samples
+      for various purposes, for example to test performance of other XES
+      analysis tools. The project includes Qt desktop app and CLI for XES files
+      generation as well as notebooks with experiments. This is my Master's
+      Project.
+    </p>
+
+    <p class="mt-6 mr-4 text-right">
+      <a href="https://github.com/mkvtech/maxes" class="link" target="_blank">
+        GitHub <ExternalSite />
+      </a>
+    </p>
+  </Fragment>
+</ProjectSection>

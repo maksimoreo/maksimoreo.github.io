@@ -1,0 +1,69 @@
+---
+import { Image } from 'astro:assets'
+import screenie1 from '../../../assets/maxes/screenie-1.png'
+import screenie2 from '../../../assets/maxes/screenie-2.png'
+import screenie3 from '../../../assets/maxes/screenie-3.png'
+import screenie4 from '../../../assets/maxes/screenie-4.png'
+---
+
+<div class="embla">
+  <div class="embla__viewport">
+    <div class="embla__container">
+      <div class="embla__slide">
+        <Image src={screenie1} alt="XES Generator, screenshot 1" />
+      </div>
+      <div class="embla__slide">
+        <Image src={screenie2} alt="XES Generator, screenshot 2" />
+      </div>
+      <div class="embla__slide">
+        <Image src={screenie3} alt="XES Generator, screenshot 3" />
+      </div>
+      <div class="embla__slide">
+        <Image src={screenie4} alt="XES Generator, screenshot 4" />
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-1 ml-auto flex justify-center gap-4">
+    <button class="embla__prev bg-gray-200 px-1 py-0.5">⬅️</button>
+    <button class="embla__next bg-gray-200 px-1 py-0.5">➡️</button>
+  </div>
+</div>
+
+<style>
+  .embla {
+    --slide-spacing: 2rem;
+  }
+
+  .embla__viewport {
+    overflow: hidden;
+  }
+
+  .embla__container {
+    display: flex;
+    touch-action: pan-y pinch-zoom;
+    margin-left: calc(var(--slide-spacing) * -1);
+  }
+
+  .embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+    padding-left: var(--slide-spacing);
+  }
+</style>
+
+<script>
+  import EmblaCarousel from 'embla-carousel'
+
+  const wrapperNode = document.querySelector('.embla')
+  const viewportNode = wrapperNode?.querySelector(
+    '.embla__viewport',
+  ) as HTMLElement
+  const prevButtonNode = wrapperNode?.querySelector('.embla__prev')
+  const nextButtonNode = wrapperNode?.querySelector('.embla__next')
+
+  const emblaApi = EmblaCarousel(viewportNode, { loop: true })
+
+  prevButtonNode?.addEventListener('click', () => emblaApi.scrollPrev(), false)
+  nextButtonNode?.addEventListener('click', () => emblaApi.scrollNext(), false)
+</script>
