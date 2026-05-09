@@ -27,8 +27,8 @@ import ProjectSection from '../ProjectSection.astro'
   <Fragment slot="title">⚓ DockerIRL</Fragment>
 
   <Fragment slot="short-description"
-    >A modern full-featured progressive Docker management 3D software to replace
-    your current cheap 2D electron app.</Fragment
+    >A modern 3D Docker management software to replace your current boring 2D
+    electron app.</Fragment
   >
 
   <Fragment slot="pins">
@@ -56,8 +56,8 @@ import ProjectSection from '../ProjectSection.astro'
     <p class="mt-6 text-justify">
       App automatically synchronises with Docker engine and places and removes
       3D containers models as they appear and disappear in the engine.
-      Synchronisation is implemented by reading Docker engine logs in real time
-      and additionally querying containers every few seconds. By default,
+      Synchronisation works in two ways: continuously reading Docker engine logs
+      in real time and querying containers every few seconds. By default,
       containers in DockerIRL spawn with 2 terminals attached: one for observing
       logs and other to connect to container's shell, but this default template
       can be configured. Surprisingly, the most challenging part of this project
